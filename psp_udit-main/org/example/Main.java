@@ -27,5 +27,27 @@ public class Main {
 
         System.out.println("\n--- PROCESAMIENTO FINALIZADO ---");
         System.out.println("Tiempo total transcurrido: " + totalSegundos + " segundos.");
+
+        // reto 02 - solución
+        // 1  Instanciamos nuestro propio gestor:
+        Plataforma netflixUdt = new Plataforma();
+
+        // 2. Añadimos el contenido limpiamente
+        netflixUdt.agregarEpisodio((new Episodio("Video 1", 30)));
+        netflixUdt.agregarEpisodio((new Episodio("Video 2", 40)));
+        netflixUdt.agregarEpisodio((new Episodio("Video 3", 50)));
+        netflixUdt.agregarEpisodio((new Episodio("Video 4", 60)));
+        netflixUdt.agregarEpisodio((new Episodio("Video 5", 70)));
+
+        long inicio = System.currentTimeMillis();
+
+        // 3. Una sola orden dispara todo
+
+        netflixUdt.procesarCatalogo();
+
+        long fin = System.currentTimeMillis();
+        long totalSegundos = (fin - inicio) / 1000;
+
+        System.out.println ("Tiempo total: " + totalSegundos + "segundos");
     }
 }
