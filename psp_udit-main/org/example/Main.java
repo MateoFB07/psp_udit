@@ -1,35 +1,31 @@
 package org.example;
 
-// Herramientas nativas para listas elásticas.
-import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println(" --- INICIANDO UDITVERSUM ---");
-        // 1. MALA PRÁCTICA: Toda la lógica de negocio tirada al "Main",
-        // los dimantes obligan a que la lista sólo acepte episodios.
+        System.out.println("--- INICIANDO PLATAFORMA STREAMING ---");
 
-        ArrayList<Episodio> catalogo = new ArrayList<>();
+        // 1. Instanciar la Plataforma
+        Plataforma miPlataforma = new Plataforma();
 
-        catalogo.add(new Episodio("Diseño 3D Intro", 45));
-        catalogo.add(new Episodio("Animación", 60));
-        catalogo.add(new Episodio("Texturas", 50));
+        // 2. Añadir 5 episodios
+        miPlataforma.agregarEpisodio(new Episodio("Episodio 1: Pilot", 45));
+        miPlataforma.agregarEpisodio(new Episodio("Episodio 2: El Descubrimiento", 50));
+        miPlataforma.agregarEpisodio(new Episodio("Episodio 3: El Conflicto", 40));
+        miPlataforma.agregarEpisodio(new Episodio("Episodio 4: El Clímax", 55));
+        miPlataforma.agregarEpisodio(new Episodio("Episodio 5: El Desenlace", 60));
 
-        // 2. MEDICIÓN DE TIEMPO
-        // Usamos "long", y no "int", porque los milisegundos son desde 1970, formando un número
-        // tan gigantesco que no cabe en la memoria normal.
+        // 3. Medición de tiempo inicial
         long inicio = System.currentTimeMillis();
 
-        // BUCLE FOR EACH (POR CADA EPISODIO DENTRO DEL CATÁLOGO)
-        for (Episodio ep : catalogo) {
-            ep.procesar(); // AQUÍ OCURRE EL BLOQUEO SECUENCIAL DE 2 SEGUNDOS.
-        }
+        // 4. Procesar el catálogo
+        miPlataforma.procesarCatalogo();
 
+        // 5. Medición de tiempo final y resultado
         long fin = System.currentTimeMillis();
-
-        // 4. RESULTADO: Fin menos inicio y dividimos entre mil (segundos)
         long totalSegundos = (fin - inicio) / 1000;
-        System.out.println("Tiempo total: " + totalSegundos + " segundos de bloqueo");
+
+        System.out.println("\n--- PROCESAMIENTO FINALIZADO ---");
+        System.out.println("Tiempo total transcurrido: " + totalSegundos + " segundos.");
     }
 }
