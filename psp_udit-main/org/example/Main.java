@@ -15,7 +15,7 @@ public class Main {
         miPlataforma.agregarEpisodio(new Episodio("Episodio 4: El Clímax", 55));
         miPlataforma.agregarEpisodio(new Episodio("Episodio 5: El Desenlace", 60));
 
-        // 3. Medición de tiempo inicial
+        // 3. Medición de tiempo inicial (AQUÍ SÍ SE DECLARAN)
         long inicio = System.currentTimeMillis();
 
         // 4. Procesar el catálogo
@@ -28,26 +28,28 @@ public class Main {
         System.out.println("\n--- PROCESAMIENTO FINALIZADO ---");
         System.out.println("Tiempo total transcurrido: " + totalSegundos + " segundos.");
 
+        System.out.println("\n--- INICIANDO RETO 02 (NETFLIX UDT) ---");
+
         // reto 02 - solución
-        // 1  Instanciamos nuestro propio gestor:
+        // 1. Instanciamos nuestro propio gestor:
         Plataforma netflixUdt = new Plataforma();
 
         // 2. Añadimos el contenido limpiamente
-        netflixUdt.agregarEpisodio((new Episodio("Video 1", 30)));
-        netflixUdt.agregarEpisodio((new Episodio("Video 2", 40)));
-        netflixUdt.agregarEpisodio((new Episodio("Video 3", 50)));
-        netflixUdt.agregarEpisodio((new Episodio("Video 4", 60)));
-        netflixUdt.agregarEpisodio((new Episodio("Video 5", 70)));
+        netflixUdt.agregarEpisodio(new Episodio("Video 1", 30));
+        netflixUdt.agregarEpisodio(new Episodio("Video 2", 40));
+        netflixUdt.agregarEpisodio(new Episodio("Video 3", 50));
+        netflixUdt.agregarEpisodio(new Episodio("Video 4", 60));
+        netflixUdt.agregarEpisodio(new Episodio("Video 5", 70));
 
-        long inicio = System.currentTimeMillis();
+        // 3. Reutilizamos las variables quitando la palabra 'long'
+        inicio = System.currentTimeMillis();
 
-        // 3. Una sola orden dispara todo
-
+        // Una sola orden dispara todo
         netflixUdt.procesarCatalogo();
 
-        long fin = System.currentTimeMillis();
-        long totalSegundos = (fin - inicio) / 1000;
+        fin = System.currentTimeMillis();
+        totalSegundos = (fin - inicio) / 1000;
 
-        System.out.println ("Tiempo total: " + totalSegundos + "segundos");
+        System.out.println("\nTiempo total: " + totalSegundos + " segundos");
     }
 }
