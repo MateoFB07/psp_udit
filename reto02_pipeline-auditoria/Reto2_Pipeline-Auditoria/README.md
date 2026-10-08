@@ -38,6 +38,9 @@ Un programa de consola en Java que ejecuta la **primera fase de una auditoría d
     Bloc de Notas (TextEdit)             Calculadora (Calculadora)
 ```
 
+
+<img width="408" height="390" alt="Captura de pantalla 2026-10-08 a las 20 56 42" src="https://github.com/user-attachments/assets/301d9d4c-6168-4051-9d55-3d6a2a715042" />
+
 ---
 
 
