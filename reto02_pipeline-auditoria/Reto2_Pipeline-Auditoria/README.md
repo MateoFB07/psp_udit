@@ -260,3 +260,15 @@ Reto2_Pipeline-Auditoria/
 ## 🔗 Enlace
 
 GitHub: `https://github.com/MateoFB07/psp_udit/tree/main/reto02_pipeline-auditoria/Reto2_Pipeline-Auditoria`
+
+---
+
+## 🔁 Reto B · Reintentos y espera entre intentos
+
+Si un `ping` termina con un código distinto de `0`, el programa entra en un bucle `while` para volver a comprobar ese destino. Cada ping tiene su propio contador, así que los fallos de un servidor no cambian el número de reintentos del otro. El contador se incrementa en cada vuelta y la condición `reintentos < 3` limita el bucle a un máximo de tres reintentos.
+
+En cada reintento se muestra `Reintento X/3`. Después, `Thread.sleep(1000)` pausa el hilo de Java durante un segundo antes de iniciar el siguiente `ping`. La pausa está dentro del bucle, por lo que solo ocurre cuando el ping anterior falló y se va a reintentar. `sleep` puede lanzar `InterruptedException`, que se captura en el `try/catch`.
+
+Como este proyecto se ejecuta en macOS, los comandos usan `-c` para indicar cuántos paquetes enviar y `-W 3000` para esperar hasta 3000 milisegundos por la respuesta de cada paquete. La sintaxis del enunciado, `-n 1 -w 3000`, corresponde a Windows.
+
+Cuando terminan los reintentos, el programa evalúa los códigos de salida finales: si ambos son `0`, abre TextEdit; si alguno sigue fallando, abre Calculator.
