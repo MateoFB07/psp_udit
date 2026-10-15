@@ -122,14 +122,14 @@ Process p2 = pb2.start(); // No empieza hasta t=3s
 int exit2 = p2.waitFor(); // Bloquea hasta que p2 termina (3s) -> Total ~6s
 ```
 
-**✅ Paralelo** (Implementado en el proyecto):
+**✅ Paralelo **:
 
 ```java
 Process p1 = pb1.start(); // Inicia p1 inmediatamente
 Process p2 = pb2.start(); // Inicia p2 inmediatamente (t=0s)
 
-int exit1 = p1.waitFor(); // Espera a p1
-int exit2 = p2.waitFor(); // Espera a p2 -> Total ~3s
+p1.waitFor(); // Espera a p1
+p2.waitFor(); // Espera a p2 -> Total ~3s
 ```
 
 ---
