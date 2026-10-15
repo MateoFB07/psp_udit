@@ -40,7 +40,8 @@ Un programa de consola en Java que ejecuta la **primera fase de una auditoría d
 
 
 
-<img width="760" height="446" alt="Captura de pantalla 2026-10-08 a las 21 24 08" src="https://github.com/user-attachments/assets/0c910309-efb3-47ee-820c-a3500ffee8da" />
+<img width="678" height="470" alt="Captura de pantalla 2026-10-15 a las 20 26 11" src="https://github.com/user-attachments/assets/10302d56-8a54-49df-9a24-84f8dde2893d" />
+
 
 ---
 
