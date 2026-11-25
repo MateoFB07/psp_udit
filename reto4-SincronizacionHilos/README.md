@@ -12,17 +12,10 @@ En la plataforma **UDITflix**, cada vez que un usuario abre la aplicación o cam
 
 El objetivo de esta práctica es implementar en Java un **gestor de descargas concurrente** que procese un lote de **7 assets** (con tiempos simulados mediante `Thread.sleep()`), garantizando en todo momento que **nunca haya más de 3 descargas activas de forma simultánea** y manteniendo un registro seguro del estado de cada tarea.
 
-### Lote de recursos configurado (Requisito B1)
+### Captura general
 
-| Elemento | Duración simulada |
-| :--- | :---: |
-| `portada-home.webp` | 1.300 ms |
-| `logo-udit.svg` | 700 ms |
-| `banner-estreno.jpg` | 1.800 ms |
-| `miniatura-01.webp` | 1.000 ms |
-| `miniatura-02.webp` | 1.500 ms |
-| `avatar-default.png` | 900 ms |
-| `fondo-player.jpg` | 1.200 ms |
+<img width="1308" height="586" alt="Captura de pantalla 2026-11-25 a las 10 44 02" src="https://github.com/user-attachments/assets/79bb905b-20c1-4913-87a9-8289c036d1bf" />
+
 
 ---
 
